@@ -1,34 +1,113 @@
-# Student Profile Analysis Using Clustering Techniques
+# 🚗 Car Pricing Prediction using Linear Regression
 
 ## Overview
 
-This project analyzes student demographic and academic profiles using clustering techniques to identify meaningful student groups. The goal is to support educational institutions in improving personalized learning, academic interventions, and resource allocation.
+This project analyzes the factors that influence automobile pricing and develops regression models to predict a vehicle's **Manufacturer's Suggested Retail Price (MSRP)**.
 
-Using machine learning and exploratory data analysis (EDA), students are segmented based on academic behavior, enrollment characteristics, and curriculum engagement patterns.
+Using Python and Scikit-learn, the project walks through the complete data science workflow including:
+
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Linear regression modeling
+- Feature selection
+- Model evaluation
+
+The goal is to understand which vehicle characteristics have the greatest impact on price while building an interpretable predictive model.
 
 ---
 
 ## Business Problem
 
-Educational institutions often struggle to identify students who may benefit from additional academic support or specialized resources. Traditional analysis methods may overlook hidden patterns within student populations.
+Accurately estimating vehicle prices is valuable for:
 
-This project addresses that challenge by:
+- Automotive manufacturers
+- Dealerships
+- Insurance companies
+- Consumers
+- Online vehicle marketplaces
 
-- Identifying groups of students with similar characteristics
-- Supporting data-driven academic interventions
-- Improving student resource allocation strategies
-- Enhancing understanding of student performance trends
+This project explores how technical specifications such as engine performance and fuel economy influence MSRP and evaluates the effectiveness of linear regression models for price prediction.
 
 ---
 
-## Objectives
+## Dataset
 
-- Perform exploratory data analysis on student profile data
-- Clean and preprocess numerical and categorical variables
-- Detect outliers and analyze feature distributions
-- Standardize and transform variables for clustering
-- Build and evaluate K-Means clustering models
-- Visualize student segments and behavioral trends
+The dataset contains information for over **10,000 vehicles**, including attributes such as:
+
+- Engine HP
+- Highway MPG
+- Number of Cylinders
+- Driven Wheels
+- Vehicle Size
+- Engine Fuel Type
+- Vehicle Style
+- MSRP (target variable)
+
+---
+
+## Project Workflow
+
+### 1. Data Cleaning
+
+- Removed duplicate records
+- Handled missing values
+- Converted categorical variables into numerical features
+- Dropped unused variables
+
+### 2. Feature Engineering
+
+Categorical variables were encoded using:
+
+- **One-Hot Encoding**
+  - Driven Wheels
+
+- **Ordinal Encoding**
+  - Vehicle Size
+
+### 3. Exploratory Data Analysis
+
+EDA included:
+
+- Distribution plots
+- Correlation analysis
+- Feature relationship exploration
+- Identification of variables associated with MSRP
+
+### 4. Modeling
+
+Three simple regression models were developed:
+
+- Linear Regression using Engine HP
+- Linear Regression using Highway MPG
+- Log-Linear Regression using Engine HP
+
+Feature selection techniques were also explored:
+
+- Forward Selection
+- Backward Selection
+
+### 5. Model Evaluation
+
+Models were evaluated using:
+
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- R² Score
+
+---
+
+## Results
+
+The final simple linear regression model using **Engine HP** produced:
+
+| Metric | Value |
+|---------|--------|
+| MAE | 20,819.47 |
+| MSE | 1,141,173,460.58 |
+| R² Score | 0.54 |
+
+While Engine HP explains a substantial portion of price variation, the results indicate that MSRP is influenced by multiple vehicle characteristics. More advanced machine learning models or additional engineered features would likely improve predictive performance.
 
 ---
 
@@ -37,92 +116,61 @@ This project addresses that challenge by:
 - Python
 - Pandas
 - NumPy
-- Scikit-learn
 - Matplotlib
 - Seaborn
+- Scikit-learn
 - Jupyter Notebook
-
----
-
-## Project Workflow
-
-### 1. Data Collection & Loading
-
-- Imported the student profile dataset into Jupyter Notebook
-- Reviewed dataset structure, missing values, duplicates, and summary statistics
-
-### 2. Exploratory Data Analysis (EDA)
-
-- Generated descriptive statistics
-- Created correlation heatmaps
-- Analyzed feature distributions using:
-  - Histograms
-  - Boxplots
-  - KDE plots
-- Investigated relationships between numerical variables
-
-### 3. Data Cleaning & Preprocessing
-
-- Removed duplicates and unnecessary columns
-- Handled missing values
-- Addressed outliers
-- Standardized numerical variables using `StandardScaler`
-- Prepared data for clustering analysis
-
-### 4. Clustering Model Development
-
-- Implemented K-Means clustering
-- Segmented students into distinct groups based on profile similarities
-- Compared clustering patterns across academic and enrollment variables
-
-### 5. Visualization & Insights
-
-- Visualized clustering results and feature relationships
-- Interpreted student segment characteristics
-- Generated insights to support educational decision-making
-
----
-
-## Key Insights
-
-- Student enrollment age and curriculum engagement showed skewed distributions
-- Correlation analysis revealed relationships between academic performance and curriculum completion
-- Clustering identified meaningful student groups that may benefit from targeted academic support
-- Standardization improved clustering consistency and model performance
-
----
-
-## Example Use Cases
-
-- Personalized learning recommendations
-- Early intervention strategies for at-risk students
-- Academic advising support
-- Resource allocation planning
-- Student success analytics
 
 ---
 
 ## Future Improvements
 
-- Compare additional clustering algorithms such as DBSCAN and Hierarchical Clustering
-- Build interactive dashboards using Plotly or Tableau
-- Apply dimensionality reduction techniques such as PCA
-- Deploy the model as a web application
-- Integrate predictive analytics for student retention forecasting
+Potential enhancements include:
+
+- Multiple Linear Regression
+- Ridge and Lasso Regression
+- Random Forest Regressor
+- Gradient Boosting (XGBoost)
+- Hyperparameter tuning
+- Cross-validation
+- Feature importance analysis
+- Interactive visualizations using Plotly
 
 ---
 
+## Skills Demonstrated
+
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Regression Modeling
+- Feature Selection
+- Model Evaluation
+- Data Visualization
+- Python Programming
+- Business Analytics
+
+---
 ## Repository Structure
 
-```bash
+```
 ├── Car_Pricing.ipynb
 ├── README.md
 └── Dataset.csv
 ```
-
 ---
-
 ## Author
 
-**Kelly Conard**  
-MBA Candidate | Data Analytics & AI Enthusiast
+**Kelly Conard**
+
+MBA Candidate | Clinical Research Professional | Data Analytics & AI
+
+- Python
+- SQL
+- Tableau
+- Power BI
+- Machine Learning
+- Business Analytics
+
+
+
